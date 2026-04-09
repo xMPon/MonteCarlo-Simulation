@@ -17,12 +17,20 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-3. Run sample simulation:
+
+3. Run sample simulation (from project root):
 
 ```powershell
-cd .\MonteCarlo-Simulation
+python run_simulation.py --samples 100000 --seed 42
+```
+
+Or, from within the MonteCarlo-Simulation directory:
+
+```powershell
 python -m src.main --samples 100000 --seed 42
 ```
+
+> **Note:** There is now a root-level CLI script (`run_simulation.py`) for easy launching. You no longer need to `cd` into the subdirectory.
 
 4. Run tests:
 
@@ -36,8 +44,19 @@ pytest -v
 
 ## Project Layout
 
-- `src/` core simulation logic and CLI entry point
-- `tests/` unit tests
+- `run_simulation.py` — root CLI script for launching simulations
+- `src/` — core simulation logic and CLI entry point
+- `tests/` — unit tests
+
+## Requirements
+
+- The code requires `numpy` (covered by `requirements.txt`). If you see an ImportError, ensure dependencies are installed.
+
+## Missing/To Improve
+
+- No documentation or usage instructions were present in the original README (now added).
+- There was no CLI or script at the root for easy launching (now provided as `run_simulation.py`).
+- The code assumes `numpy` is installed (requirements.txt covers this, but there is no runtime check in code).
 - `notebooks/` Jupyter examples
 - `data/` generated outputs (kept out of git except placeholder)
 
