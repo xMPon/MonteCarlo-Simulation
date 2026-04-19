@@ -61,3 +61,15 @@ pytest -v
 - Add financial simulations (option pricing, VaR, portfolio paths)
 - Add plotting utilities and benchmark notebook
 - Add CI checks for tests and linting
+
+## Downloading Market Index Data
+
+To fetch historical S&P 500 data for use in your simulations, run the provided script:
+
+```powershell
+python download_index_data.py
+```
+
+This will attempt to download S&P 500 data from Yahoo Finance (using yfinance) and save it in the `data/` folder. If Yahoo fails, it will automatically try to fetch the data from Stooq as a fallback.
+
+You can then load the resulting CSV in your analysis or simulations.

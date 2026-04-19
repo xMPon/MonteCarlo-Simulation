@@ -6,29 +6,9 @@ __pycache__/
 build/
 dist/
 
-# Virtual environments
-.venv/
-venv/
-env/
-
-# Tooling
-.pytest_cache/
-.coverage
-.ruff_cache/
-.ipynb_checkpoints/
-
-# Environment files
-.env
-.env.*
-!.env.example
-
 # Editors
 .vscode/
 .idea/
 
-# Agent/local instructions
-CLAUDE.md
-
-# Data outputs
-*.csv
-*.pkl
+# Pytest cache
+.pytest_cache/
