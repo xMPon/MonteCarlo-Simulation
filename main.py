@@ -5,7 +5,7 @@ from __future__ import annotations
 import argparse
 
 
-from src.simulations import estimate_pi
+from simulations import estimate_pi
 import numpy as np
 import matplotlib.pyplot as plt
 

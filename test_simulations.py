@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from src.simulations import estimate_pi
+from simulations import estimate_pi
 
 
 def test_estimate_pi_is_reproducible_with_seed() -> None:

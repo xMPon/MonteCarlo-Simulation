@@ -4,13 +4,13 @@ import os
 import sys
 
 if __name__ == "__main__":
-    # Forward all arguments to the main CLI in src/main.py
+    # Forward all arguments to the main CLI in main.py at project root
     project_dir = os.path.dirname(os.path.abspath(__file__))
-    src_main = os.path.join(project_dir, "src", "main.py")
-    if not os.path.exists(src_main):
-        print("src/main.py not found.")
+    main_py = os.path.join(project_dir, "main.py")
+    if not os.path.exists(main_py):
+        print("main.py not found.")
         sys.exit(1)
-    sys.argv[0] = src_main
-    with open(src_main, "rb") as f:
-        code = compile(f.read(), src_main, 'exec')
+    sys.argv[0] = main_py
+    with open(main_py, "rb") as f:
+        code = compile(f.read(), main_py, 'exec')
         exec(code, {"__name__": "__main__"})

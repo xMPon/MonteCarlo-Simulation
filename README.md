@@ -24,13 +24,8 @@ pip install -r requirements.txt
 python run_simulation.py --samples 100000 --seed 42
 ```
 
-Or, from within the MonteCarlo-Simulation directory:
 
-```powershell
-python -m src.main --samples 100000 --seed 42
-```
-
-> **Note:** There is now a root-level CLI script (`run_simulation.py`) for easy launching. You no longer need to `cd` into the subdirectory.
+> **Note:** The project now uses a flat structure. Use the root-level CLI script (`run_simulation.py`) for launching simulations. No `src/` directory is needed.
 
 4. Run tests:
 
@@ -45,8 +40,9 @@ pytest -v
 ## Project Layout
 
 - `run_simulation.py` — root CLI script for launching simulations
-- `src/` — core simulation logic and CLI entry point
-- `tests/` — unit tests
+- `main.py` — CLI entry point and sample simulation logic
+- `simulations.py` — core simulation logic
+- `test_simulations.py` — unit tests
 
 ## Requirements
 
