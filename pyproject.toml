@@ -1,6 +1,6 @@
 [tool.pytest.ini_options]
-testpaths = ["tests"]
-addopts = "-v --tb=short --cov=src --cov-report=term-missing"
+testpaths = ["."]
+addopts = "-v --tb=short --cov=simulations --cov=finance --cov=exotics --cov-report=term-missing"
 
 [tool.ruff]
 line-length = 100

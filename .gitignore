@@ -6,9 +6,23 @@ __pycache__/
 build/
 dist/
 
+# Virtual environments
+.venv/
+venv/
+
 # Editors
 .vscode/
 .idea/
 
-# Pytest cache
+# Pytest / coverage
 .pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Downloaded market data
+data/
+.ruff_cache/
